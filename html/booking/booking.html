@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+        <meta name="description" content="Boka ett bord på Leksands bästa barbeque restaurang 3BQ - Billy's Barbeque">
+        <title>3BQ - Bordsbokning</title>
+        <link rel="icon" href="../../images/logo.png">
+        <link href="../../stylesheets/reset.css" rel="stylesheet" >
+        <link href="../../stylesheets/main.css" rel="stylesheet" >
+    </head>
+
+    <body>
+        <header>
+            <div id="header-wrapper">
+                <div class="logo-row">
+                    <h1>Billy's Barbeque</h1>
+                    <picture>
+                        <source srcset="../../images/logo-small.png" media="(max-width: 400px)">
+                        <img class="img-logo" alt="3BQ's logotyp" src="../../images/logo.png">
+                    </picture>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Hem</a></li>
+                        <li><a href="../menu.html">Meny</a></li>
+                        <li><a href="../booking/booking.html">Bordsbokning</a></li>
+                        <li><a href="../about.html">Historia</a></li>
+                        <li><a href="../contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="main-wrapper">
+            <main>
+                <section>
+                    <header>
+                        <h2>Bordsbokning</h2>
+                        <p>
+                            Välkommen att boka ditt bord hos oss! Är du sugen på att sitta utomhus ser du vädret för valt datum! 
+                            Vädret presenteras i samarbete med OpenWeatherMap. Vänligen notera att sällskap över 8 personer måste mejla eller 
+                            ringa till oss, se kontaktinformation under "Kontakt". Tack för din förståelse!
+                        </p>
+                    </header>
+    
+                    <hr>
+    
+                    <div class="row">
+                        <section class="col-two">
+                            <header>
+                                <h3>Bokning</h3>
+                            </header>
+                            
+                            <form method="get" action="thanks.html">
+                                <p>
+                                    <label for="numberOfPeople">Antal personer</label>
+                                    <select name="NumberOfPeople" id="numberOfPeople">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8+">8+</option>
+                                    </select>
+                                </p>
+            
+                                <p>
+                                    <label for="date">Datum*:</label>
+                                    <input type="date" name="Date" id="date" required>
+                                </p>
+            
+                                <p>
+                                    <label for="time">Tid*:</label>
+                                    <select name="Time" id="time" required>
+                                        <option selected value="">Välj tid</option>
+                                        <option disabled value="16">16:00 (bokad)</option>
+                                        <option disabled value="1630">16:30 (bokad)</option>
+                                        <option value="17">17:00</option>
+                                        <option disabled value="1730">17:30 (bokad)</option>
+                                        <option value="18">18:00</option>
+                                        <option value="1830">18:30</option>
+                                        <option value="19">19:00</option>
+                                        <option disabled value="1930">19:30 (bokad)</option>
+                                        <option value="20">20:00</option>
+                                        <option disabled value="2030">20:30 (bokad)</option>
+                                        <option value="21">21:00</option>
+                                        <option value="2130">21:30</option>
+                                        <option disabled value="22">22:00 (bokad)</option>
+                                    </select>
+                                </p>
+    
+                                <p>
+                                    <label for="placement">Placering*:</label>
+                                    <select name="Placement" id="placement" required>
+                                        <option selected value="">Välj placering</option>
+                                        <option value="inside">Inomhus</option>
+                                        <option value="outside">Utomhus</option>
+                                        <option value="any">Det spelar ingen roll</option>
+                                    </select>
+                                </p>
+            
+                                <p>
+                                    <label for="fullName">Fullständigt Namn*</label>
+                                    <input type="text" name="FullName" id="fullName" required>
+                                </p>
+            
+                                <p>
+                                    <label for="phone">Telefonnummer*</label>
+                                    <input type="tel" name="Phone" id="phone" title="Ange telefonnumret i format: 'XXX-XXX XX XX'" required pattern="[0-9]{3}-[0-9]{3} [0-9]{2} [0-9]{2}" >
+                                </p>
+            
+                                <p>
+                                    <label for="email">Email*</label>
+                                    <input type="email" name="Email" id="email" required >
+                                </p>
+            
+                                <p>
+                                    <label for="comments">Meddelande</label>
+                                    <textarea name="Comments" rows="5" cols="20" id="comments"></textarea>
+                                </p>
+            
+                                <p>
+                                    <input type="submit" value="Boka">
+                                </p>
+                            </form>
+                        </section>
+                        <section class="col-two">
+                            <header>
+                                <h3>Vädret</h3>
+                            </header>
+    
+                            <div id="weatherWidget"></div>
+                        </section>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <div id="footer-wrapper">
+                <div>
+                    <p class="footer-header">Öppettider</p>
+                    <ul>
+                        <li>Måndag - Torsdag: 11:00 - 22:00</li>
+                        <li>Fredag - Lördag: 11:00 - 01:00</li>
+                        <li>Söndag: 11:00 - 21:00</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p>&copy; 3BQ - Billy's Barbeque 2024</p>
+                    <p>Med reservation för felskrivningar</p>
+                    <p>Design av Viktor Bill</p>
+                </div>
+
+                <address>
+                    <p class="footer-header">Address</p>
+                    <p>3BQ - Billy's Barbecue</p>
+                    <p>Grillvägen 12</p>
+                    <p>793 30 Leksand</p>
+                </address>
+                
+            </div>
+        </footer>
+        
+        <script type="module" src="../../javascript/booking.js"></script>
+    </body>
+</html>

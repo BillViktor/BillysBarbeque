@@ -1,0 +1,415 @@
+/* Fonts */
+@font-face {
+    font-family: PatrickHand;
+    src: url(fonts/PatrickHand/PatrickHand-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+
+/* Variabler */
+:root {
+    --max-website-width: 80rem;
+    --background-color: #000; 
+    --font-color: #fff; 
+    --accent-color-red: #B30D0D;
+    --accent-color-orange: #FF6300;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: url("../images/background-fire.png") fixed repeat-x bottom center;
+    backdrop-filter: blur(5px);
+    background-color: var(--background-color);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Huvudet */
+body > header {
+    background-color: var(--background-color);
+    border-bottom: 0.25rem solid #fff;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+
+#header-wrapper {
+    max-width: var(--max-website-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.logo-row h1 {
+    margin-left: 1rem;
+}
+
+.logo-row img {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .footer-header {
+    font: bold 1rem 'PatrickHand', Georgia, serif;
+    color: var(--font-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+section h3 {
+    padding-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--font-color);
+    font: bold 1rem 'PatrickHand', Georgia, serif;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 1rem;              
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: var(--accent-color-orange);
+}
+
+nav ul li a:focus {
+    outline: 2px solid var(--accent-color-orange);
+}
+
+/* Innehåll */
+p, ul li, dl, table {
+    font: normal 1.25rem 'Roboto', Georgia, serif;
+    color: var(--font-color);
+    padding: 0.5rem 0;
+}
+
+main {
+    background-color: var(--background-color);
+    border: 0.25rem solid #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+#main-wrapper {
+    width: 100%;
+    max-width: var(--max-website-width);
+    margin: 3rem auto;
+    flex: 1;
+}
+
+img {
+    margin: 1rem auto;
+    width: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.img-border {
+    border: 0.25rem solid #fff;
+}
+
+hr {
+    height: 0.1rem;
+    background-color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    font: normal 1.25rem 'Roboto', Georgia, serif;
+    color: var(--accent-color-orange);
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Flex (rader/kolumner) */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col-two {
+    width: 50%;
+    padding: 1rem;
+}
+
+.col-three {
+    width: 33%;
+    padding: 1rem;
+}
+
+.left-right-border {
+    border-left: 0.25rem solid var(--font-color);
+    border-right: 0.25rem solid var(--font-color);
+}
+
+.right-border {
+    border-right: 0.25rem solid var(--font-color);
+}
+
+.align-items-center {
+    margin: auto 0;
+}
+
+/* Lista/Meny */
+dl {
+    color: var(--font-color);
+    text-align: left;
+}
+
+dl dt {
+    font-weight: bold;
+    display: inline;
+}
+
+dd {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--accent-color-orange);
+    display: inline;
+    padding: 0;
+}
+
+/* Formulär */
+form {
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+}
+
+input, select, textarea {
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    background-color: var(--accent-color-orange);
+}
+
+input[type="submit"] {
+    background-color: var(--accent-color-red);
+    color: #fff;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:focus, input[type="submit"]:hover {
+    background-color: var(--accent-color-orange);
+}
+
+/* Tabell */
+table {
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #fff;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+    background-color: var(--accent-color-red);
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-color);
+    width: 100%;
+    border-top: 0.25rem solid #fff;
+    padding: 0.5rem 0;
+}
+
+footer p {
+    padding: 0.25rem 0;
+    font-size: 1.125rem;
+}
+
+.footer-header {
+    font-size: 1.5rem;
+}
+
+footer ul li {
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+
+footer address p {
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+
+#footer-wrapper {
+    max-width: var(--max-website-width);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Riktigt små enheter */
+@media(max-width: 400px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo-row h1 {
+        margin-left: .5rem;
+    }
+
+    #main-wrapper {
+        margin: 1rem auto;
+    }
+
+    /* Table */
+    table, thead, tbody, th, td, tr {
+        display: block;
+        border: none;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border-bottom: 1px solid #ccc;
+        padding-top: 0.5rem;
+    }
+    
+    td {
+        position: relative;
+        padding-left: 50%;
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+
+        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-weight: 900;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Tid";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Väder";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Temperatur";
+    }
+}
+
+/* Mellanstora */
+@media(max-width: 650px) {
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+}
+
+
+/* Mindre enheter */
+@media(max-width: 1023px) {
+    /* Header */
+    body > header {
+        position: relative;
+        border: 0.25rem solid var(--font-color);
+    }
+
+    #header-wrapper {
+        display: block;
+    }
+
+    .logo-row {
+        justify-content: start;
+    }
+
+    nav {
+        border-top: 0.25rem solid var(--font-color);
+    }
+
+    /* Rader */
+    .row {
+        display: block;
+    }
+
+    .col-two, .col-three {
+        border: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Footer */
+    #footer-wrapper {
+        display: block;
+    }
+
+    #footer-wrapper div {
+        margin: 1rem 0;
+    }
+}
